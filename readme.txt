@@ -1,9 +1,9 @@
-=== Ultimate Nofollow ===
-Contributors: codecollective
+=== SEO Links ===
+Contributors: fahdi
 Tags: nofollow,link,links,meta,insert,rel nofollow,seo,checkbox,popup,shortcode,blogroll
 Requires at least: 2.8
-Tested up to: 5.2.2
-Stable tag: 1.4.8
+Tested up to: 5.2.3
+Stable tag: 1.0
 
 Adds a checkbox in the insert link popup box for including rel="nofollow" in links as you create them; as well as other tools that provides complete control over the rel="nofollow" tag on your blogroll links and comments.
 
@@ -46,79 +46,5 @@ You can also include the optional <a> attributes `title` and `target`. A full ex
 3. Nofollow checkbox on the add/edit blogroll link page.
 
 == Changelog ==
-= 1.4.8 =
-* Updated description for incoming update
-
-= 1.4.7 =
-* The Ultimate NoFollow plugin is now being solely maintained by [codecollective].
-
-= 1.4.6 =
-* Fixed some errors that were causing error messages on admin pages
-
-= 1.4.5 =
-* Fixed checkbox bug, thanks [keesromkes](https://wordpress.org/support/profile/keesromkes)
-
-= 1.4.4 =
-* Purely cosmetic WordPress 4.4 update
-
-= 1.4.3 =
-* Fixes compatibility issue with Wordpress 4.2
-* Thanks to [Zoe Corkhill](https://profiles.wordpress.org/zoecorkhill/) for the fix
-
-= 1.4.2 =
-* Fixes compatability issue with WordPress 3.9
-
-= 1.4.1 =
-* Removed forgotten var_dump() left from debugging process
-
-= 1.4 =
-* Official release
-* Added nofollow checkbox to individual post links
-
-= 0.1.3.1 =
-* Updates to documentation.
-
-= 0.1.3 =
-* Stable beta version.
-* Nofollow checkbox added to the add/edit blogroll links dialogue.
-* Adds option to nofollow all blogroll links.
-
-= 0.1.2 =
-* Stable beta version.
-* Add/remove nofollow from all links in comments.
-
-= 0.1.1 =
-* Stable beta version.
-* Adds full nofollow shortcodes.
-* Adds options page.
-
-= 0.1.0 =
-* First released beta version.
-* Stable, but not all functions active yet. 
-
-== Upgrade Notice ==
-The Ultimate NoFollow plugin is now being solely maintained by [codecollective].
-
-= 1.4.6 =
-Fixes error messages being shown on some admin pages.
-
-= 1.4.5 =
-Fixes checkbox bug introduced in WP 4.5.
-
-= 1.4.4 =
-Purely cosmetic WordPress 4.4 update. Happy New Year.
-
-= 1.4.3 =
-Required update if using WordPress 4.2 or above.
-
-= 1.4.2 =
-Required update if using WordPress 3.9 or above.
-
-= 1.4.1 =
-Strongly recommended upgrade, version 1.4 is dumping a NULL variable onto public facing pages.
-
-= 1.4 =
-Strongly recommended upgrade, significant improvement in usefulness.
-
-= 0.1.3.1 =
-Updated documentation.
+= 1.0
+* The very first release
