@@ -1,17 +1,16 @@
 <?php
 /*
-Plugin Name: Sponsored, NoFollow and ..
-Plugin URI: https://www.fahdmurtaza.com/
-Description: Sponsored, NoFollow and ..
+Plugin Name: WP SEO Links
+Plugin URI: https://wp.help/
+Description: Better SEO links for: nofollow, sponsored, and ugc (user-generated content)
 Version: 1.0
-Author: Fahad Murtaza
-Author URI: https://www.fahdmurtaza.com/
+Author: WP Help
+Author URI: https://wp.help/
 License: GPLv2
 
-SEO nofollow, sponsored and ..
+WP SEO Links
 
 */
-
 /***********************
  * OPTIONS PAGE SECTION *
  ************************/
