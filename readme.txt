@@ -1,5 +1,5 @@
 === SEO Links ===
-Contributors: fahdi
+Contributors: fahdi,itswphelp
 Tags: nofollow,link,links,meta,insert,rel nofollow,seo,checkbox,popup,shortcode,blogroll
 Requires at least: 2.8
 Tested up to: 5.2.3
