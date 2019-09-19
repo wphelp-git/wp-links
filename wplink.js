@@ -32,11 +32,11 @@
     append: function() {
       var html =
           '<br /><label><span> </span>' +
-          '<input type="checkbox" id="link-nofollow-checkbox" /> Add <code>rel="nofollow"</code> to link</label>' +
+          '<input type="checkbox" class="radio-head" id="link-nofollow-checkbox" /> Add <code>rel="nofollow"</code> to link</label>' +
           '<br /><label><span> </span>' +
-          '<input type="checkbox" id="link-sponsored-checkbox" /> Add <code>rel="sponsored"</code> to link</label>' +
+          '<input type="checkbox" class="radio-head" id="link-sponsored-checkbox" /> Add <code>rel="sponsored"</code> to link</label>' +
           '<br /><label><span> </span>' +
-          '<input type="checkbox" id="link-ugc-checkbox" /> Add <code>rel="ugc"</code> to link</label>';
+          '<input type="checkbox" class="radio-head" id="link-ugc-checkbox" /> Add <code>rel="ugc"</code> to link</label>';
 
       $('#wp-link .link-target').append(html);
     },
@@ -902,4 +902,14 @@
 
   $(document).ready(wpLink.append); // (mod)
   $(document).ready(wpLink.init);
+  $(document).ready(
+      function() {
+        $('.radio-head').on('change', function() {
+          console.log('The radio saved my life tonight\n' +
+              'That old that the DJ played made me feel all right');
+          $('.radio-head').not(this).prop('checked', false);
+        });
+      }
+  );
+
 })(jQuery, window.wpLinkL10n, window.wp);

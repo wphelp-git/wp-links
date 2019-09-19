@@ -53,7 +53,6 @@ function itswphelp_options_do_page() {
 			<?php $options = get_option( 'itswphelp_item' ); // populate $options array from database ?>
             <table class="form-table">
 
-
                 <!-- all comment links -->
                 <tr valign="top">
                     <th scope="row">Nofollow all links in comments?</th>
@@ -62,7 +61,6 @@ function itswphelp_options_do_page() {
                                value="1" <?php checked( $options['nofollow_comments'] ); ?> />
                     </td>
                 </tr>
-
 
                 <!-- all blogroll links -->
                 <tr valign="top">
@@ -74,12 +72,12 @@ function itswphelp_options_do_page() {
                     </td>
                 </tr>
 
-
                 <!-- <tr valign="top"><th scope="row">Text:</th>
 					<td>
                     	UA-<input type="text" name="ssga_item[sometext1]" value="<?php // echo $options[ 'test_text_1']; ?>" style="width:90px;" maxlength="8" />
 					</td>
 				</tr> -->
+
             </table>
             <p class="submit">
                 <input type="submit" class="button-primary"
@@ -262,11 +260,11 @@ function itswphelp_blogroll_save_meta_box( $link_rel ) {
 	}
 
 	if ( $_POST['itswphelp_blogroll_sponsored_checkbox'] ) {
-		$rel .= ' nofollow';
+		$rel .= ' sponsored';
 	}
 
 	if ( $_POST['itswphelp_blogroll_ugc_checkbox'] ) {
-		$rel .= ' nofollow';
+		$rel .= ' ugc';
 	}
 
 	return trim( $rel );
