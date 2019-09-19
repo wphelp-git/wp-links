@@ -53,7 +53,7 @@ function itswphelp_options_do_page() {
             <table class="form-table">
 
                 <!-- all comment links -->
-                <tr valign="top">
+                <tr>
                     <th scope="row">Nofollow all links in comments?</th>
                     <td><input name="itswphelp_item[nofollow_comments]"
                                type="checkbox"
@@ -62,7 +62,7 @@ function itswphelp_options_do_page() {
                 </tr>
 
                 <!-- all blogroll links -->
-                <tr valign="top">
+                <tr>
                     <th scope="row">Nofollow all blogroll links?</th>
                     <td><input name="itswphelp_item[nofollow_blogroll]"
                                type="checkbox"
