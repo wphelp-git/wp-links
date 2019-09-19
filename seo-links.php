@@ -5,7 +5,6 @@ Plugin URI: https://wp.help/
 Description: Better SEO links for: nofollow, sponsored, and ugc (user-generated content)
 Version: 1.0
 Author: WP Help
-Author URI: https://wp.help/
 License: GPLv2
 
 WordPress Better SEO Links
@@ -89,7 +88,7 @@ function itswphelp_options_do_page() {
 }
 
 /* define additional plugin meta links */
-function set_plugin_meta_ultnofo( $links, $file ) {
+function itswphelp_set_plugin_meta( $links, $file ) {
 	$plugin = plugin_basename( __FILE__ ); // '/nofollow/nofollow.php' by default
 	if ( $file == $plugin ) { // if called for THIS plugin then:
 		$newlinks = [
@@ -104,7 +103,7 @@ function set_plugin_meta_ultnofo( $links, $file ) {
 
 /* add hooks/filters */
 // add meta links to plugin's section on 'plugins' page (10=priority, 2=num of args)
-add_filter( 'plugin_row_meta', 'set_plugin_meta_ultnofo', 10, 2 );
+add_filter( 'plugin_row_meta', 'itswphelp_set_plugin_meta', 10, 2 );
 
 // add plugin's options to white list on admin initialization
 add_action( 'admin_init', 'itswphelp_options_init' );
@@ -292,7 +291,7 @@ if ( $itswphelp_options['nofollow_blogroll'] ) {
 /**********************************************
  * ADD LINK DIALOGUE NOFOLLOW CHECKBOX SECTION *
  ***********************************************/
-function nofollow_redo_wplink() {
+function itswphelp_redo_wplink() {
 	wp_deregister_script( 'wplink' );
 
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -311,7 +310,7 @@ function nofollow_redo_wplink() {
 	] );
 }
 
-add_action( 'admin_enqueue_scripts', 'nofollow_redo_wplink', 999 );
+add_action( 'admin_enqueue_scripts', 'itswphelp_redo_wplink', 999 );
 
 
 /************************************
