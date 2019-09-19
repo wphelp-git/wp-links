@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP SEO Links
+Plugin Name: WP Better SEO Links
 Plugin URI: https://wp.help/
 Description: Better SEO links for: nofollow, sponsored, and ugc (user-generated content)
 Version: 1.0
@@ -8,9 +8,9 @@ Author: WP Help
 Author URI: https://wp.help/
 License: GPLv2
 
-WP SEO Links
-
+WordPress Better SEO Links
 */
+
 /***********************
  * OPTIONS PAGE SECTION *
  ************************/

@@ -1,4 +1,4 @@
-=== SEO Links ===
+=== WP Better SEO Links ===
 Contributors: fahdi,itswphelp
 Tags: nofollow,link,links,meta,insert,rel nofollow,seo,checkbox,popup,shortcode,blogroll,sponsored,ugc,user-generated content
 Requires at least: 2.8
@@ -26,15 +26,9 @@ The ability to select to open in a new tab or window
 
 == Installation ==
 
-Download the latest zip file and extract the plugin directory.
-Upload it to your
-``/wp-content/plugins/`
-directory.
-Activate
-WP SEO Links
-on the
-Plugins
-menu in WordPress.
+* Download the latest zip file and extract the plugin directory.
+* Upload it to your `/wp-content/plugins/` directory.
+* Activate WP SEO Links in the Plugins menu in WordPress.
 
 == Frequently Asked Questions ==
 
