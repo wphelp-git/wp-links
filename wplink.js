@@ -30,11 +30,13 @@
 
     // append nofollow checkbox HTML (mod)
     append: function() {
-      var html = '<br /><label><span> </span><input type="checkbox" id="link-nofollow-checkbox" /> Add <code>rel="nofollow"</code> to link</label>'
-          +
-          '<br /><label><span> </span><input type="checkbox" id="link-sponsored-checkbox" /> Add <code>rel="sponsored"</code> to link</label>'
-          +
-          '<br /><label><span> </span><input type="checkbox" id="link-ugc-checkbox" /> Add <code>rel="ugc"</code> to link</label>';
+      var html =
+          '<br /><label><span> </span>' +
+          '<input type="checkbox" id="link-nofollow-checkbox" /> Add <code>rel="nofollow"</code> to link</label>' +
+          '<br /><label><span> </span>' +
+          '<input type="checkbox" id="link-sponsored-checkbox" /> Add <code>rel="sponsored"</code> to link</label>' +
+          '<br /><label><span> </span>' +
+          '<input type="checkbox" id="link-ugc-checkbox" /> Add <code>rel="ugc"</code> to link</label>';
 
       $('#wp-link .link-target').append(html);
     },
@@ -279,16 +281,12 @@
           inputs.url.val(href);
           inputs.openInNewTab.prop('checked',
               '_blank' === linkNode.attr('target'));
-          inputs.submit.val(wpLinkL10n.update);
-        }else if (href !== '_wp_link_placeholder') {
-          inputs.url.val(href);
-          inputs.openInNewTab.prop('checked',
-              '_blank' === linkNode.attr('target'));
-          inputs.submit.val(wpLinkL10n.update);
-        }else if (href !== '_wp_link_placeholder') {
-          inputs.url.val(href);
-          inputs.openInNewTab.prop('checked',
-              '_blank' === linkNode.attr('target'));
+          inputs.relNofollow.prop('checked',
+              'nofollow' === linkNode.attr('rel'));
+          inputs.relSponsored.prop('checked',
+              'sponsored' === linkNode.attr('rel'));
+          inputs.relUgc.prop('checked',
+              'ugc' === linkNode.attr('rel'));
           inputs.submit.val(wpLinkL10n.update);
         }
         else {
@@ -357,9 +355,20 @@
     getAttrs: function() {
       wpLink.correctURL();
 
+      var relAttrib = inputs.relNofollow.prop('checked') ? 'nofollow' : '';
+
+      if (relAttrib === '') {
+        relAttrib = inputs.relSponsored.prop('checked') ? 'sponsored' : '';
+      }
+
+      if (relAttrib === '') {
+        relAttrib = inputs.relUgc.prop('checked') ? 'ugc' : '';
+      }
+
       return {
         href: $.trim(inputs.url.val()),
         target: inputs.openInNewTab.prop('checked') ? '_blank' : null,
+        rel: relAttrib,
       };
     },
 
@@ -367,7 +376,7 @@
       var html = '<a href="' + attrs.href + '"';
 
       if (attrs.target) {
-        html += ' rel="noopener" target="' + attrs.target + '"';
+        html += ' rel="' + attrs.rel + '" target="' + attrs.target + '"';
       }
 
       return html + '>';
@@ -386,6 +395,7 @@
       var attrs, text, html, begin, end, cursor, selection,
           textarea = wpLink.textarea;
 
+      // console.log('HTML update');
       if (!textarea) {
         return;
       }
@@ -497,6 +507,7 @@
           attrs['data-wplink-edit'] = null;
           attrs['data-mce-href'] = attrs.href;
           $link.attr(attrs);
+          // console.log('MCE script');
         }
       });
 
