@@ -35,12 +35,15 @@ The ability to select to open in a new tab or window
 = How do I insert links in my posts or pages? =
 Just select the text you want to link, click on the link option in your editor, add the link and click on the "gear" icon to edit the link. Select the desired options and click add.
 
-== Screenshots ==
+==  Screenshots  ==
 
-Nofollow option on the insert/edit link popup for posts and pages.
-Settings page on the Dashboard.
-Nofollow checkbox on the add/edit blogroll link page.
+* Nofollow option on the insert/edit link popup for posts and pages.
+* Settings page on the Dashboard.
+* Nofollow checkbox on the add/edit blogroll link page.
 
 == Changelog ==
 = 1.0
 * The very first release
+
+== Upgrade Notice ==
+* None as of now. First release
